@@ -2,9 +2,9 @@
 require_relative '../model/elemento_espacial'
 class Nave < ElementoEspacial
 
-  def chocar_con asteroide
+  def chocar_con elemento_espacial
     @@masa_actual = @masa
-    @masa = @masa - (asteroide.masa * 0.5)
-    asteroide.masa += @@masa_actual * 0.1
+    @masa -= elemento_espacial.masa * 0.5
+    elemento_espacial.masa += @@masa_actual * 0.1
   end
 end

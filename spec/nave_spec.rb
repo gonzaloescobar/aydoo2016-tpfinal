@@ -35,4 +35,14 @@ describe 'Nave' do
     expect(asteroide.masa).to eq 110
   end
 
+  it 'deberia retornar true cuando esta_vivo? con vida 200' do
+    nave = Nave.new 200, 100
+    expect(nave.esta_vivo?).to eq true
+  end
+
+  it 'deberia retornar false cuando esta_vivo? con vida 0' do
+    nave = Nave.new 0, 100
+    expect(nave.esta_vivo?).to eq false
+  end
+
 end

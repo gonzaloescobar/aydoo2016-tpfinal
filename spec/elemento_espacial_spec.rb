@@ -14,4 +14,14 @@ describe 'ElementoEspacial' do
     expect(elemento.masa).to eq 100
   end
 
+  it 'deberia retornar true cuando esta_vivo? con vida 200' do
+    elemento = ElementoEspacial.new 200, 100
+    expect(elemento.esta_vivo?).to eq true
+  end
+
+  it 'deberia retornar false cuando esta_vivo? con vida 0' do
+    elemento = ElementoEspacial.new 0, 100
+    expect(elemento.esta_vivo?).to eq false
+  end
+
 end

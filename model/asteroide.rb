@@ -1,12 +1,7 @@
 #require 'byebug'
-class Asteroide
+require_relative '../model/elemento_espacial'
 
-attr_accessor :vida
-attr_accessor :masa
+class Asteroide < ElementoEspacial
 
-def initialize (vida, masa)
-  @vida = vida
-  @masa = masa
-end
 
 end

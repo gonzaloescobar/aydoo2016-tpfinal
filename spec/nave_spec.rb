@@ -28,4 +28,11 @@ describe 'Nave' do
     expect(nave.vida).to eq 100
   end
 
+  it 'deberia retornar masa de asteroide 10% mas de masa de nave cuando choca con nave' do
+    nave = Nave.new 100, 100
+    asteroide = Asteroide.new 50, 100
+    nave.chocar_con(asteroide)
+    expect(asteroide.masa).to eq 110
+  end
+
 end

@@ -10,7 +10,12 @@ class ElementoEspacial
   end
 
   def chocar_con elemento_espacial
-    elemento_espacial.reglas_colisiones
+    efectos = Efecto.new(self, elemento_espacial)
+    efectos.afectar_choque
+  end
+
+  def efecto_actual(elemento_espacial)
+    @choques_permitidos[elemento_espacial.class]
   end
 
   def esta_vivo?

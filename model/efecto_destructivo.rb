@@ -1,5 +1,6 @@
 #require 'byebug'
-class EfectoDestructivo
+require_relative '../model/efecto'
+class EfectoDestructivo < Efecto
 
   def initialize cantidad_a_destruir
     @cantidad = cantidad_a_destruir

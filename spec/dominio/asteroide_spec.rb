@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/asteroide'
+require_relative '../../model/dominio/asteroide'
 
 describe 'Asteroide' do
 

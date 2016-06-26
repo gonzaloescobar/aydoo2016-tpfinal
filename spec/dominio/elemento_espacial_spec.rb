@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/elemento_espacial'
+require_relative '../../model/dominio/elemento_espacial'
 
 describe 'ElementoEspacial' do
 

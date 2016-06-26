@@ -10,6 +10,7 @@ class ElementoEspacial
   end
 
   def chocar_con elemento_espacial
+    elemento_espacial.reglas_colisiones
   end
 
   def esta_vivo?

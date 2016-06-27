@@ -1,7 +1,6 @@
 require 'rspec'
 require 'spec_helper'
 require_relative '../../model/dominio/misil'
-require_relative '../../model/dominio/nave'
 
 describe 'Misil' do
 
@@ -29,4 +28,10 @@ describe 'Misil' do
     expect(misil.vida).to eq 500
   end
 
+  it 'deberia retornar masa intacta cuando misil choque con asteroide' do
+    misil = Misil.new 500, 100
+    asteroide = Asteroide.new 100, 100
+    misil.chocar_con(asteroide)
+    expect(misil.masa).to eq 100
+  end
 end

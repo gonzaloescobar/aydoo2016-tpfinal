@@ -67,8 +67,14 @@ describe 'Nave' do
     expect(nave.vida).to eq 300
   end
 
-  it 'deberia retornar ElementoEspacialMuertoExcepcion' do
+  it 'deberia retornar ElementoEspacialMuertoExcepcion cuando el elemento chocado esta muerto por vida' do
     nave = Nave.new 0, 100
+    estrella = Estrella.new 200, 100
+    expect {nave.chocar_con(estrella)}.to raise_exception ElementoEspacialMuertoExcepcion
+  end
+
+  it 'deberia retornar ElementoEspacialMuertoExcepcion cuando el elemento chocado esta muerto por masa' do
+    nave = Nave.new 100, 0
     estrella = Estrella.new 200, 100
     expect {nave.chocar_con(estrella)}.to raise_exception ElementoEspacialMuertoExcepcion
   end

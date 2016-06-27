@@ -28,6 +28,13 @@ describe 'Asteroide' do
     expect(asteroide.vida).to eq 100
   end
 
+  it 'deberia retornar masa intacta cuando choca asteroide con misil' do
+    asteroide = Asteroide.new 100, 110
+    misil = Misil.new 100, 200
+    asteroide.chocar_con(misil)
+    expect(asteroide.masa).to eq 110
+  end
+
   it 'deberia retornar vida intacta cuando choca con misil' do
     asteroide = Asteroide.new 100, 100
     misil = Misil.new 100, 200
@@ -42,6 +49,13 @@ describe 'Asteroide' do
     expect(asteroide.vida).to eq 100
   end
 
+  it 'deberia retornar masa intacta cuando choca con bomba' do
+    asteroide = Asteroide.new 100, 150
+    bomba = Bomba.new 100, 200
+    asteroide.chocar_con(bomba)
+    expect(asteroide.masa).to eq 150
+  end
+
   it 'deberia retornar vida intacta cuando choca con asteroide' do
     asteroide = Asteroide.new 100, 100
     otro_asteroide = Asteroide.new 100, 200
@@ -49,11 +63,25 @@ describe 'Asteroide' do
     expect(asteroide.vida).to eq 100
   end
 
+  it 'deberia retornar masa intacta cuando choca con asteroide' do
+    asteroide = Asteroide.new 100, 100
+    otro_asteroide = Asteroide.new 100, 200
+    asteroide.chocar_con(otro_asteroide)
+    expect(asteroide.masa).to eq 100
+  end
+
   it 'deberia retornar vida intacta cuando choca con estrella' do
     asteroide = Asteroide.new 100, 100
     estrella = Estrella.new 100, 200
     asteroide.chocar_con(estrella)
     expect(asteroide.vida).to eq 100
+  end
+
+  it 'deberia retornar masa intacta cuando choca con estrella' do
+    asteroide = Asteroide.new 100, 100
+    estrella = Estrella.new 100, 200
+    asteroide.chocar_con(estrella)
+    expect(asteroide.masa).to eq 100
   end
 
   it 'deberia retornar true cuando esta_vivo? con vida 200' do

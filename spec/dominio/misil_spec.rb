@@ -41,4 +41,11 @@ describe 'Misil' do
     misil.chocar_con(bomba)
     expect(misil.vida).to eq 500
   end
+
+  it 'deberia retornar masa intacta cuando misil choque con bomba' do
+    misil = Misil.new 500, 100
+    bomba = Bomba.new 100, 100
+    misil.chocar_con(bomba)
+    expect(misil.masa).to eq 100
+  end
 end

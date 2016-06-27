@@ -14,8 +14,17 @@ class ElementoEspacial
     if !self.esta_vivo? || !elemento_espacial.esta_vivo?
       fail ElementoEspacialMuertoExcepcion.new
     end
-    efectos = Choque.new(self, elemento_espacial)
-    efectos.afectar_choque
+    #efectos = Choque.new(self, elemento_espacial)
+    #efectos.afectar_choque
+
+    elemento_clonado = self.clone
+
+    efecto_chocado = self.efecto_actual(elemento_espacial)
+    efecto_chocado.afectar(self, elemento_espacial)
+
+    efecto_chocante = elemento_espacial.efecto_actual(self)
+    efecto_chocante.afectar(elemento_espacial, elemento_clonado)
+
   end
 
   def efecto_actual(elemento_espacial)

@@ -1,6 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 require_relative '../../model/dominio/nave'
+require_relative '../../model/excepciones/elemento_muerto_excepcion'
 
 describe 'Nave' do
 
@@ -65,5 +66,12 @@ describe 'Nave' do
     nave.chocar_con(estrella)
     expect(nave.vida).to eq 300
   end
+
+  it 'deberia retornar ElementoEspacialMuertoExcepcion' do
+    nave = Nave.new 0, 100
+    estrella = Estrella.new 200, 100
+    expect {nave.chocar_con(estrella)}.to raise_exception ElementoEspacialMuertoExcepcion
+  end
+
 
 end

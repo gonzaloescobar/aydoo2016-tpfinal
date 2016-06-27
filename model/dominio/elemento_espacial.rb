@@ -1,4 +1,5 @@
 #require 'byebug'
+require_relative '../../model/excepciones/elemento_muerto_excepcion'
 class ElementoEspacial
 
   attr_accessor :vida
@@ -10,6 +11,9 @@ class ElementoEspacial
   end
 
   def chocar_con elemento_espacial
+    if !self.esta_vivo? || !elemento_espacial.esta_vivo?
+      fail ElementoEspacialMuertoExcepcion.new
+    end
     efectos = Efecto.new(self, elemento_espacial)
     efectos.afectar_choque
   end

@@ -42,4 +42,11 @@ describe 'Bomba' do
     expect(bomba.vida).to eq 100
   end
 
+  it 'deberia retornar 100 de vida cuando bomba choque con estrella' do
+    bomba = Bomba.new 200, 100
+    estrella = Estrella.new 30, 100
+    bomba.chocar_con(estrella)
+    expect(bomba.vida).to eq 100
+  end
+
 end

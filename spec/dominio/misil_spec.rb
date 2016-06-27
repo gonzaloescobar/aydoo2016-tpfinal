@@ -21,6 +21,13 @@ describe 'Misil' do
     expect(misil.vida).to eq 400
   end
 
+  it 'deberia retornar masa intacta cuando misil choque con nave' do
+    misil = Misil.new 500, 200
+    nave = Nave.new 100, 100
+    misil.chocar_con(nave)
+    expect(misil.masa).to eq 200
+  end
+
   it 'deberia retornar vida intacta cuando misil choque con asteroide' do
     misil = Misil.new 500, 100
     asteroide = Asteroide.new 100, 100
@@ -54,6 +61,20 @@ describe 'Misil' do
     otro_misil = Misil.new 100, 100
     misil.chocar_con(otro_misil)
     expect(misil.vida).to eq 400
+  end
+
+  it 'deberia retornar masa intacta cuando misil con vida 500 choque con misil' do
+    misil = Misil.new 500, 300
+    otro_misil = Misil.new 100, 100
+    misil.chocar_con(otro_misil)
+    expect(misil.masa).to eq 300
+  end
+
+  it 'deberia retornar masa intacta cuando misil choque con estrella' do
+    misil = Misil.new 500, 300
+    estrella = Estrella.new 100, 100
+    misil.chocar_con(estrella)
+    expect(misil.masa).to eq 300
   end
 
   it 'deberia retornar true cuando esta_vivo? con vida 200' do

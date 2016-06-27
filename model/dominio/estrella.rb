@@ -8,7 +8,7 @@ class Estrella < ElementoEspacial
   def initialize (vida, masa)
     @vida = vida
     @masa = masa
-    @choques_permitidos = {Nave => EfectoDestructivo.new(100),
+    @choques_permitidos = {Nave => EfectoDestructivo.new(@vida),
       Asteroide => EfectoDestructivo.new(@vida),
       Misil => EfectoNulo.new,
       Bomba => EfectoDestructivo.new(@vida),

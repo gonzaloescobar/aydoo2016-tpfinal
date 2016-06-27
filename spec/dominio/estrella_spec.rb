@@ -14,4 +14,11 @@ describe 'Estrella' do
     expect(estrella.masa).to eq 100
   end
 
+  it 'deberia retornar 0 de vida cuando estrella choque con nave' do
+    estrella = Estrella.new 100, 100
+    nave = Nave.new 100, 200
+    estrella.chocar_con(nave)
+    expect(estrella.vida).to eq 0
+  end
+
 end

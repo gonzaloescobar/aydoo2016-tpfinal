@@ -21,11 +21,25 @@ describe 'Estrella' do
     expect(estrella.vida).to eq 0
   end
 
+  it 'deberia retornar masa intacta cuando estrella choque con nave' do
+    estrella = Estrella.new 100, 110
+    nave = Nave.new 100, 200
+    estrella.chocar_con(nave)
+    expect(estrella.masa).to eq 110
+  end
+
   it 'deberia retornar 100 de vida cuando estrella choque con misil' do
     estrella = Estrella.new 100, 100
     misil = Misil.new 100, 200
     estrella.chocar_con(misil)
     expect(estrella.vida).to eq 100
+  end
+
+  it 'deberia retornar masa instacta cuando estrella choque con misil' do
+    estrella = Estrella.new 100, 200
+    misil = Misil.new 100, 200
+    estrella.chocar_con(misil)
+    expect(estrella.masa).to eq 200
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con bomba' do
@@ -35,11 +49,25 @@ describe 'Estrella' do
     expect(estrella.vida).to eq 0
   end
 
-  it 'deberia retornar 0 de vida cuando estrella choque con bomba' do
+  it 'deberia retornar masa intacta cuando estrella choque con bomba' do
+    estrella = Estrella.new 100, 120
+    bomba = Bomba.new 100, 200
+    estrella.chocar_con(bomba)
+    expect(estrella.masa).to eq 120
+  end
+
+  it 'deberia retornar 0 de vida cuando estrella choque con asteroide' do
     estrella = Estrella.new 100, 100
     asteroide = Asteroide.new 100, 200
     estrella.chocar_con(asteroide)
     expect(estrella.vida).to eq 0
+  end
+
+  it 'deberia retornar masa instacta cuando estrella choque con asteroide' do
+    estrella = Estrella.new 100, 130
+    asteroide = Asteroide.new 100, 200
+    estrella.chocar_con(asteroide)
+    expect(estrella.masa).to eq 130
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con estrella2' do
@@ -47,6 +75,13 @@ describe 'Estrella' do
     estrella2 = Estrella.new 100, 200
     estrella.chocar_con(estrella2)
     expect(estrella.vida).to eq 0
+  end
+
+  it 'deberia retornar masa instacta cuando estrella choque con estrella2' do
+    estrella = Estrella.new 100, 100
+    estrella2 = Estrella.new 100, 200
+    estrella.chocar_con(estrella2)
+    expect(estrella.masa).to eq 100
   end
 
   it 'deberia retornar true cuando esta_vivo? con vida 200' do

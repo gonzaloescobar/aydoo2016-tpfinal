@@ -54,4 +54,8 @@ describe 'Misil' do
     expect(misil.esta_vivo?).to eq true
   end
 
+  it 'deberia retornar false cuando esta_vivo? con vida 0' do
+    misil = Misil.new 0, 100
+    expect(misil.esta_vivo?).to eq false
+  end
 end

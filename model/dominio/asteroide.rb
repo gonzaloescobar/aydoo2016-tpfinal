@@ -1,5 +1,9 @@
 #require 'byebug'
 require_relative '../dominio/elemento_espacial'
+require_relative '../efectos/efecto_destructivo'
+require_relative '../efectos/efecto_constructivo'
+require_relative '../efectos/efecto_masa'
+require_relative '../efectos/efecto_nulo'
 
 class Asteroide < ElementoEspacial
 

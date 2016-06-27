@@ -1,5 +1,5 @@
 #require 'byebug'
-class Efecto
+class Choque
 
   def initialize elemento_chocado, elemento_chocante
     @elemento_chocado = elemento_chocado

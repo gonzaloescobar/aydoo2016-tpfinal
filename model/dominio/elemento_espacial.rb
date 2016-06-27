@@ -14,7 +14,7 @@ class ElementoEspacial
     if !self.esta_vivo? || !elemento_espacial.esta_vivo?
       fail ElementoEspacialMuertoExcepcion.new
     end
-    efectos = Efecto.new(self, elemento_espacial)
+    efectos = Choque.new(self, elemento_espacial)
     efectos.afectar_choque
   end
 
@@ -28,6 +28,12 @@ class ElementoEspacial
       @esta_vivo = true
     end
     return @esta_vivo
+  end
+
+  def agregar_nuevo_elemento(elemento, efecto)
+    if !@choques_permitidos.include? elemento
+      @choques_permitidos[elemento] = efecto
+    end
   end
 
 end

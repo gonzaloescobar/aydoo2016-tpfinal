@@ -8,8 +8,10 @@ class Asteroide < ElementoEspacial
     @vida = vida
     @masa = masa
     @choques_permitidos = {Nave => EfectoMasa.new(10),
-    Misil => EfectoNulo.new,
-    Asteroide => EfectoNulo.new}
-  end
+      Misil => EfectoNulo.new,
+      Asteroide => EfectoNulo.new,
+      Bomba => EfectoNulo.new,
+      Estrella => EfectoNulo.new}
+    end
 
-end
+  end

@@ -21,6 +21,13 @@ describe 'Asteroide' do
     expect(asteroide.masa).to eq 120
   end
 
+  it 'deberia retornar vida intacta cuando choca asteroide con nave' do
+    asteroide = Asteroide.new 100, 100
+    nave = Nave.new 100, 200
+    asteroide.chocar_con(nave)
+    expect(asteroide.vida).to eq 100
+  end
+
   it 'deberia retornar vida intacta cuando choca con misil' do
     asteroide = Asteroide.new 100, 100
     misil = Misil.new 100, 200

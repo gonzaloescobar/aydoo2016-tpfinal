@@ -1,5 +1,4 @@
 #require 'byebug'
-
 class Efecto
 
   def initialize elemento_chocado, elemento_chocante

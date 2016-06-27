@@ -8,8 +8,7 @@ require_relative '../efecto'
 class Misil < ElementoEspacial
 
   def initialize (vida, masa)
-    @vida = vida
-    @masa = masa
+    super
     @choques_permitidos = {Nave => EfectoDestructivo.new(100),
       Misil => EfectoDestructivo.new(100),
       Asteroide => EfectoNulo.new,

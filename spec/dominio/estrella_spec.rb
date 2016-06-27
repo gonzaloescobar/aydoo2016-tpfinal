@@ -49,4 +49,14 @@ describe 'Estrella' do
     expect(estrella.vida).to eq 0
   end
 
+  it 'deberia retornar true cuando esta_vivo? con vida 200' do
+    estrella = Estrella.new 200, 100
+    expect(estrella.esta_vivo?).to eq true
+  end
+
+  it 'deberia retornar false cuando esta_vivo? con vida 0' do
+    estrella = Estrella.new 0, 100
+    expect(estrella.esta_vivo?).to eq false
+  end
+
 end

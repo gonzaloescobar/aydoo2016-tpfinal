@@ -22,4 +22,11 @@ describe 'Misil' do
     expect(misil.vida).to eq 400
   end
 
+  it 'deberia retornar vida intacta cuando misil choque con asteroide' do
+    misil = Misil.new 500, 100
+    asteroide = Asteroide.new 100, 100
+    misil.chocar_con(asteroide)
+    expect(misil.vida).to eq 500
+  end
+
 end

@@ -6,7 +6,7 @@ class EfectoNulo < Efecto
     @cantidad = cantidad_a_destruir
   end
 
-  def afectar elemento_espacial_afectado
+  def afectar elemento_espacial_afectado, elemento_espacial_afectante
     #metodo sin logica que representa un efecto del dominio
   end
 

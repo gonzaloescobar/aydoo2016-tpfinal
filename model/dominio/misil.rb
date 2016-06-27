@@ -10,7 +10,6 @@ class Misil < ElementoEspacial
     @vida = vida
     @masa = masa
     @choques_permitidos = {Nave => EfectoDestructivo.new(100),
-      Misil => EfectoDestructivo.new(100),
-      Asteroide => EfectoNulo.new(0)}
+      Misil => EfectoDestructivo.new(100),Asteroide => EfectoDestructivo.new(0)}
   end
 end

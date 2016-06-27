@@ -1,6 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 require_relative '../../model/dominio/misil'
+require_relative '../../model/dominio/nave'
 
 describe 'Misil' do
 
@@ -13,5 +14,6 @@ describe 'Misil' do
     misil = Misil.new 200, 100
     expect(misil.masa).to eq 100
   end
+
 
 end

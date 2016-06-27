@@ -15,5 +15,11 @@ describe 'Misil' do
     expect(misil.masa).to eq 100
   end
 
+  it 'deberia retornar 400 de vida cuando misil choque con nave' do
+    misil = Misil.new 500, 100
+    nave = Nave.new 100, 100
+    misil.chocar_con(nave)
+    expect(misil.vida).to eq 400
+  end
 
 end

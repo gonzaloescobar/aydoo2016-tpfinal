@@ -46,7 +46,7 @@ describe 'Nave' do
     expect(nave.esta_vivo?).to eq false
   end
 
-  it 'deberia retornar vida intacta cuando nave choca con asteroide' do
+  it 'deberia retornar vida 20 cuando nave choca con misil' do
     nave = Nave.new 100, 100
     misil = Misil.new 100, 100
     nave.chocar_con(misil)

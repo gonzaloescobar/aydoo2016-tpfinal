@@ -49,4 +49,9 @@ describe 'Bomba' do
     expect(bomba.vida).to eq 100
   end
 
+  it 'deberia retornar true cuando esta_vivo? con vida 200' do
+    bomba = Bomba.new 200, 100
+    expect(bomba.esta_vivo?).to eq true
+  end
+
 end

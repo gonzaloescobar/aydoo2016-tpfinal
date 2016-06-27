@@ -28,4 +28,11 @@ describe 'Bomba' do
     expect(bomba.vida).to eq 0
   end
 
+  it 'deberia retornar 0 de vida cuando nave choque con asteroide' do
+    bomba = Bomba.new 200, 100
+    misil = Misil.new 30, 100
+    bomba.chocar_con(misil)
+    expect(bomba.vida).to eq 100
+  end
+
 end

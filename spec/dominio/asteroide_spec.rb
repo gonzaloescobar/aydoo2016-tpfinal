@@ -49,4 +49,14 @@ describe 'Asteroide' do
     expect(asteroide.vida).to eq 100
   end
 
+  it 'deberia retornar true cuando esta_vivo? con vida 200' do
+    asteroide = Asteroide.new 200, 100
+    expect(asteroide.esta_vivo?).to eq true
+  end
+
+  it 'deberia retornar false cuando esta_vivo? con vida 0' do
+    asteroide = Asteroide.new 0, 100
+    expect(asteroide.esta_vivo?).to eq false
+  end
+
 end

@@ -59,4 +59,11 @@ describe 'Nave' do
     expect(nave.vida).to eq 20
   end
 
+  it 'deberia retornar vida 300 cuando nave de vida 100 choca con estrella de vida 200' do
+    nave = Nave.new 100, 100
+    estrella = Estrella.new 200, 100
+    nave.chocar_con(estrella)
+    expect(nave.vida).to eq 300
+  end
+
 end

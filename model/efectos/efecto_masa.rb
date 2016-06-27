@@ -1,6 +1,6 @@
 #require 'byebug'
-
-class EfectoMasa
+require_relative '../efectos/efecto'
+class EfectoMasa < Efecto
 
   def initialize cantidad_a_destruir
     @cantidad = cantidad_a_destruir

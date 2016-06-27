@@ -34,4 +34,6 @@ describe 'ElementoEspacial' do
     expect(elemento.esta_vivo?).to eq false
   end
 
+
+
 end

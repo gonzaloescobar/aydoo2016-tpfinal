@@ -34,6 +34,8 @@ describe 'ElementoEspacial' do
     expect(elemento.esta_vivo?).to eq false
   end
 
-
-
+  it 'deberia retornar VidaNegativaExcepcion cuando creo elemento con vida menor a cero' do
+    expect {elemento = ElementoEspacial.new -100, 100}.to raise_exception VidaNegativaExcepcion
+  end
+  
 end

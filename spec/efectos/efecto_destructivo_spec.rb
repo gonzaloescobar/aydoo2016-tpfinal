@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/efecto_destructivo'
+require_relative '../../model/efectos/efecto_destructivo'
 
 describe 'EfectoDestructivo' do
 

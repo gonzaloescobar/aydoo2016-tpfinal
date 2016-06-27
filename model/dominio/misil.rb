@@ -1,8 +1,8 @@
 #require 'byebug'
 require_relative '../dominio/elemento_espacial'
-require_relative '../efecto_destructivo'
-require_relative '../efecto_masa'
-require_relative '../efecto_nulo'
+require_relative '../efectos/efecto_destructivo'
+require_relative '../efectos/efecto_masa'
+require_relative '../efectos/efecto_nulo'
 require_relative '../efecto'
 
 class Misil < ElementoEspacial

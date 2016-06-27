@@ -1,7 +1,7 @@
 #require 'byebug'
 require_relative '../dominio/elemento_espacial'
-require_relative '../efecto_destructivo'
-require_relative '../efecto_masa'
+require_relative '../efectos/efecto_destructivo'
+require_relative '../efectos/efecto_masa'
 
 class Nave < ElementoEspacial
 

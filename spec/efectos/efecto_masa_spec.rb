@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/efecto_masa'
+require_relative '../../model/efectos/efecto_masa'
 
 describe 'EfectoMasa' do
 

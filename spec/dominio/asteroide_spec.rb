@@ -42,4 +42,11 @@ describe 'Asteroide' do
     expect(asteroide.vida).to eq 100
   end
 
+  it 'deberia retornar vida intacta cuando choca con estrella' do
+    asteroide = Asteroide.new 100, 100
+    estrella = Estrella.new 100, 200
+    asteroide.chocar_con(estrella)
+    expect(asteroide.vida).to eq 100
+  end
+
 end

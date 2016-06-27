@@ -35,4 +35,11 @@ describe 'Estrella' do
     expect(estrella.vida).to eq 0
   end
 
+  it 'deberia retornar 0 de vida cuando estrella choque con bomba' do
+    estrella = Estrella.new 100, 100
+    asteroide = Asteroide.new 100, 200
+    estrella.chocar_con(asteroide)
+    expect(estrella.vida).to eq 0
+  end
+
 end

@@ -3,14 +3,15 @@ require_relative '../dominio/elemento_espacial'
 require_relative '../efectos/efecto_destructivo'
 require_relative '../efectos/efecto_masa'
 
-class Bomba < ElementoEspacial
+class Estrella < ElementoEspacial
 
   def initialize (vida, masa)
     @vida = vida
     @masa = masa
     @choques_permitidos = {Nave => EfectoDestructivo.new(100),
       Asteroide => EfectoDestructivo.new(@vida),
-      Misil => EfectoDestructivo.new(@vida/2),
-      Bomba => EfectoDestructivo.new(100)}
+      Misil => EfectoNulo.new,
+      Bomba => EfectoDestructivo.new(@vida),
+      Estrella => EfectoDestructivo.new(@vida)}
     end
   end

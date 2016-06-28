@@ -60,4 +60,13 @@ it 'ejemplo 3 bomba choca con bomba' do
     expect(estrella.masa).to eq 50
   end
 
+  #La clase SOL solamente se creó para probar el principio abierto-cerrado
+  it 'deberia retornar 140 cuando se agrega nuevo elemento Sol y se lo choca contra una nave' do
+    nave = Nave.new 150, 250
+    sol = Sol.new 1000, 2000
+    nave.agregar_nuevo_elemento(Sol, EfectoDestructivo.new(10))
+    nave.chocar_con(sol)
+    expect(nave.vida).to eq 140
+  end
+
 end

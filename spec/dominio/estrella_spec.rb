@@ -15,7 +15,7 @@ describe 'Estrella' do
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con nave' do
-    estrella = Estrella.new 100, 100
+    estrella = Estrella.new 183, 100
     nave = Nave.new 100, 200
     estrella.chocar_con(nave)
     expect(estrella.vida).to eq 0
@@ -28,11 +28,11 @@ describe 'Estrella' do
     expect(estrella.masa).to eq 110
   end
 
-  it 'deberia retornar 100 de vida cuando estrella choque con misil' do
-    estrella = Estrella.new 100, 100
+  it 'deberia retornar 120 de vida cuando estrella choque con misil' do
+    estrella = Estrella.new 120, 100
     misil = Misil.new 100, 200
     estrella.chocar_con(misil)
-    expect(estrella.vida).to eq 100
+    expect(estrella.vida).to eq 120
   end
 
   it 'deberia retornar masa instacta cuando estrella choque con misil' do
@@ -43,7 +43,7 @@ describe 'Estrella' do
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con bomba' do
-    estrella = Estrella.new 100, 100
+    estrella = Estrella.new 700, 100
     bomba = Bomba.new 100, 200
     estrella.chocar_con(bomba)
     expect(estrella.vida).to eq 0
@@ -57,7 +57,7 @@ describe 'Estrella' do
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con asteroide' do
-    estrella = Estrella.new 100, 100
+    estrella = Estrella.new 900, 100
     asteroide = Asteroide.new 100, 200
     estrella.chocar_con(asteroide)
     expect(estrella.vida).to eq 0
@@ -71,7 +71,7 @@ describe 'Estrella' do
   end
 
   it 'deberia retornar 0 de vida cuando estrella choque con estrella2' do
-    estrella = Estrella.new 100, 100
+    estrella = Estrella.new 200, 300
     estrella2 = Estrella.new 100, 200
     estrella.chocar_con(estrella2)
     expect(estrella.vida).to eq 0

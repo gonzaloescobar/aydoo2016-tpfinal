@@ -28,10 +28,6 @@ class ElementoEspacial
     efecto_chocante.afectar(elemento_espacial, elemento_clonado)
   end
 
-  def efecto_actual(elemento_espacial)
-    @choques_permitidos[elemento_espacial.class]
-  end
-
   def esta_vivo?
     @esta_vivo = false
     if (@vida > 0 and @masa > 0)
@@ -42,6 +38,10 @@ class ElementoEspacial
 
   def agregar_nuevo_elemento(elemento, efecto)
     @choques_permitidos[elemento] = efecto
+  end
+
+  def efecto_actual(elemento_espacial)
+    @choques_permitidos[elemento_espacial.class]
   end
 
 end

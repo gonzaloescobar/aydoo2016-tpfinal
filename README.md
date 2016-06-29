@@ -11,7 +11,7 @@ La solución que se implementó fue la de crear los ELementos Espaciales con un 
 Cada efecto nuevo hereda de una clase padre Efecto y cada Elemento nuevo de una clase ElementosEspaciales.
 
 A su vez, para garantizar el principio SOLID Abierto-Cerrado, se creó un método agregar_elemento que permite agregar nuevos elementos sin necesidad de modificar ninguna clase existente.  
-Se puede ver un ejemplo en los test de ELementoEspacial en el cuál agrego un nuevo elemento Sol (Clase creada solamente para pruebas) y lo agrego sin violar este principio SOLID.  
+Se puede ver un ejemplo en los test de integración en el cuál agrego un nuevo elemento Sol (Clase creada solamente para pruebas que NO pertenece al dominio) y lo agrego sin violar este principio SOLID.  
 
 Para éste trabajo Práctico se modelaron dos excepciones: 
 - ElementoMuertoExcepcion.  
